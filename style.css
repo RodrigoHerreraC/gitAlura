@@ -1,0 +1,116 @@
+header{
+        padding: 20px 0;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        border-radius: 25px;
+}
+.caja{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+
+}
+#logo{
+    width:50%;
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    margin-left: 5%;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.text__area{
+display: flex;
+margin-top: 15px;
+width: 100%;
+
+}
+
+body{
+    background-color:rgb(235 235 255);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    
+}
+.btn{
+    width: 20%;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 15px;
+    margin: 10px 2rem 0 0;
+    padding: 10 10 10 10;
+    cursor: pointer;
+}
+.first:hover{
+    background-color: rgb(36, 35, 114);;
+}
+.first{
+    background-color: rgb(7, 6, 110);
+    color: white;
+    font-family: Poppins;
+    font-size: 15px;
+}
+.scnd:hover{
+    background-color: rgb(231, 226, 221);
+}
+.scnd{
+    font-family: Poppins;
+    font-size: 15px;
+}
+.btn__container{
+    margin-left: 15%;
+}
+.textarea__container{
+    border: 85px;
+    border-color: rgb(250, 189, 97);
+    border-radius: 5px;
+    background-color: rgb(235 235 255);
+    font-family: Poppins;
+}
+.primero{
+    margin-top: 40px;
+    position: relative;
+    left: 150px;
+
+}
+.second{
+    border: 5px;
+    background-color: white;
+    background-image: url(imagenes/pngwing.com.png);   
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: opacity(50%);
+
+    position: absolute;
+    right: 150px;
+    top: 60px;
+}
+.instruccion{
+
+    margin-left: 150px;
+    font-family: Poppins;
+    font-size: 15px;
+    color: dimgrey;
+}
+footer{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-family: Poppins;
+}
+.imagen{
+    margin-right: 15px;
+}
+.logo{
+    width: 20px;    
+}
+
+
+

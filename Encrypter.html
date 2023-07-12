@@ -1,0 +1,81 @@
+	<meta charset="utf-8">
+    <!DOCTYPE html>
+    <html lang="es">
+<html>
+    <head>
+        <title>Text Encrypter</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="caja">
+                    <h1 id="logo"><img  src="imagenes/alura-logo.1686744883.svg"></h1>
+            </div>
+        </header>   
+            <div class="text__area">        
+                <textarea placeholder="Ingresa un texto para que lo encripte" rows="15" cols="95" id="Encrypter" onkeyup=validarSiNumero(this.value) class="textarea__container primero"></textarea>
+                <textarea placeholder="Aun no tengo nada que mostrar" rows="25" cols="50" id="resultado" class="textarea__container second" readonly onchange=borrar()> </textarea>
+            </div>  
+            <p class="instruccion"> <img src="imagenes/pngwing.com (1).png" alt="alert" class="instruccion_img">  Solo utiliza minusculas sin signos.</p>
+            <div class= "btn__container">
+            <button class="btn first" onclick=Encriptador()> Encriptar </button>
+            <button class="btn scnd" onclick=Desencriptar()> Desencriptar </button>
+            </div>
+
+    <script>
+    var vocales= ["a","e","i","o","u"]
+    var Cripto=["lkg","sf","pwt","tl","jr"]
+        function Encriptador (){
+            var texto=document.getElementById("Encrypter").value 
+
+
+            for (let index = 0; index < vocales.length; index++) {
+                const element = vocales[index];
+                console.log(element)
+                var rec=new RegExp (element,"g")
+                texto=texto.replace(rec,Cripto[index])
+                console.log (texto)
+            }
+            document.getElementById("resultado").value = texto
+            borrar()
+        }
+        function Desencriptar(){
+            var texto=document.getElementById("Encrypter").value 
+            for (let index = 0; index < Cripto.length; index++) {
+                const element = Cripto[index];
+                console.log(element)
+                var rec=new RegExp (element,"g")
+                texto=texto.replace(rec,vocales[index])
+                console.log (texto)
+            }
+            document.getElementById("resultado").value = texto
+            borrar()
+        }
+        function validarSiNumero(numero){  
+            console.log(numero)
+            var filtro=numero.replace(/[0-9]/g, '')
+            filtro=filtro.replace(/[^a-z ]/g, '')
+            filtro=filtro.replace(/[A-Z]/g, '')
+            console.log(filtro)
+            document.getElementById("Encrypter").value=filtro
+
+             }
+        function borrar(){
+            document.getElementById("resultado").style.background="white"
+            document.getElementById("resultado").style.filter="opacity(100%)"
+        }
+    </script>
+    </body>
+    <footer>
+        <p>Creado por Rodrigo Herrera Cárdenas para el programa ONE. <a rel="stylesheet" href="https://www.instagram.com/cardenas_rh_/"target="_blank"><img src="imagenes/logo-insta.1686744883.svg" alt="logotipo de instagram" class="imagen logo"></a>  <a href="https://mx.linkedin.com/in/rodrigo-herrera-c%C3%A1rdenas-0541a6258"target="_blank"><img src="imagenes/logo-linkedin.1686744883.svg" alt="Logotipo de LinkedIn" class="imagen logo"></img></a></p>
+ 
+        <p><img src="imagenes/logo_oracleAlura-es.1686744883.svg" alt="Oracle+Alura" class=" oracle"></p>
+    </footer>
+
+
+
+
+</html>
